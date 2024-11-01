@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Sign-up</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style_signup.css">
+    </head>
+    <body>
+        <div class="form-container">
+            <img src= "../images/BPSU-weblogo.png" alt= "BPSU Student Organization Collaboration and Events Management">
+            <form>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact_no.">Contact Number</label>
+                        <input type="text" id="contact_no" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="campus">Campus</label>
+                        <select class="dropdown-signup" id="campus" name="campus" onchange="updateColleges()">
+                            <option value=""></option>
+                            <option value="main">Main Campus</option>
+                            <option value="balanga">Balanga Campus</option>
+                            <option value="abucay">Abucay Campus</option>
+                            <option value="orani">Orani Campus</option>
+                            <option value="dinalupihan">Dinalupihan Campus</option>
+                            <option value="bagac">Bagac Campus</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="major">College</label>
+                            <select class="dropdown-signup" id="college" name="college">
+                                <option value=""></option>
+                              </select>
+                        </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="program">Program</label>
+                        <select class="dropdown-signup" id="program" name="program">
+                            <option value=""></option>
+                          </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="major">Major</label>
+                        <select class="dropdown-signup" id="major" name="major">
+                            <option value=""></option>
+                          </select>
+                    </div>
+                </div>
+
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input type="password" id="confirmPassword" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">Sign Up</button>
+                <p>have an account? <a href="log-in_students.html" class="log-text">Log-in</a></p>
+            </form>
+        </div>
+        <script src="sign_up.js" async defer></script>
+    </body>
+    </html>
