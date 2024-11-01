@@ -67,7 +67,7 @@
 
   // Latest Event
 
-  .events-container {
+.events-container {
     text-align: center;
     padding: 20px;
     background-color: #fff;
@@ -81,9 +81,10 @@
 }
 
 .section-title {
-    font-size: 2rem;
+  font-size: 2rem;
     margin-bottom: 20px;
     font-weight: bold;
+    text-align: center;
 }
 
 .events-grid {
@@ -136,8 +137,4 @@
 
 .btn:hover {
     background-color: #5a0000;
-}
-
-#btn-view{
-  text-align: center;
 }
