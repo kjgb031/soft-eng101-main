@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $major = $_POST['major'];
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-    $sql = "INSERT INTO users (firstname, lastname, email, contact_no, campus, college, program, major, password, role)
+    $sql = "INSERT INTO users (first_name, last_name, email, contact_no, campus, college, program, major, password, role)
             VALUES ('$firstName', '$lastName', '$email', '$contact_no', '$campus', '$college', '$program', '$major', '$password', 'student')";
 
     if ($conn->query($sql) === TRUE) {
