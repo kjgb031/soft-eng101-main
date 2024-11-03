@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 02, 2024 at 05:12 PM
+-- Generation Time: Nov 03, 2024 at 04:19 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -145,6 +145,13 @@ CREATE TABLE `student_data` (
   `user_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `student_data`
+--
+
+INSERT INTO `student_data` (`student_id`, `campus`, `college`, `program`, `major`, `contact_number`, `user_id`) VALUES
+(0, 'main', 'College of Computer Studies', 'Bachelor of Computer Science', 'Software Development', 0, 0);
+
 -- --------------------------------------------------------
 
 --
@@ -156,9 +163,17 @@ CREATE TABLE `users` (
   `first_name` varchar(255) NOT NULL,
   `last_name` varchar(255) NOT NULL,
   `avatar` varchar(255) NOT NULL,
-   `role` varchar(255) NOT NULL,
-   `email` varchar(255) NOT NULL
+  `role` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`user_id`, `first_name`, `last_name`, `avatar`, `role`, `email`, `password`) VALUES
+(0, '', '', '', '', 'kristinjoyceellise@gmail.com', '');
 
 --
 -- Indexes for dumped tables
