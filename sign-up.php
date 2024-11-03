@@ -18,14 +18,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $college = $_POST['college'];
     $program = $_POST['program'];
     $major = $_POST['major'];
-    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+    $password = $_POST['password'];
+    $confirmPassword = $_POST['confirmPassword'];
+
+    if (empty($firstName) || empty($lastName) || empty($email) || empty($contact_no) || empty($campus) || empty($college) || empty($program) || empty($major) || empty($password) || empty($confirmPassword)) {
+        die("All fields are required. Please fill out all fields.");
+    }
+
+    if ($password !== $confirmPassword) {
+        die("Passwords do not match.");
+    }
+
+    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
     $sql = "INSERT INTO users (first_name, last_name, email, contact_no, campus, college, program, major, password, role)
-            VALUES ('$firstName', '$lastName', '$email', '$contact_no', '$campus', '$college', '$program', '$major', '$password', 'student')";
+            VALUES ('$firstName', '$lastName', '$email', '$contact_no', '$campus', '$college', '$program', '$major', '$hashedPassword', 'student')";
 
     if ($conn->query($sql) === TRUE) {
         echo "Sign-up successful! Redirecting to login...";
         header("Location: log-in_students.html");
+        exit();
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
