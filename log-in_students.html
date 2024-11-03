@@ -11,11 +11,12 @@
     <body>
         <div>
             <img src= "images/BPSU-weblogo.png" alt= "BPSU Student Organization Collaboration and Events Management">  
-            <form>
+            <form action="login.php" method="POST">
                 <p>Email</p>
-                    <input type="text">
+                <input type="text" name="email" required>
                 <p>Password</p>
-                    <input type="password">
+                <input type="password" name="password" required>
+                <input type="hidden" name="user_type" value="student">
                 <br>
                 <button type="submit" class="submit-btn">Log-in</button>
             </form>
