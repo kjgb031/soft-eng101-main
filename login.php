@@ -28,8 +28,7 @@ if ($stmt->num_rows > 0) {
     $stmt->fetch();
     // Verify password
     if (password_verify($password, $hashed_password)) {
-        // Store user session
-        $_SESSION['email'] = $email; 
+        $_SESSION['email'] = $email; // Store user session
         header("Location: dashboard.html"); // Redirect to a dashboard page
         exit();
     } else {

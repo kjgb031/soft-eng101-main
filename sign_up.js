@@ -165,19 +165,19 @@ function updateMajors() {
 }
 
 function validateForm() {
-    const password = document.getElementById("password").value;
-    const confirmPassword = document.getElementById("confirmPassword").value;
-    const passwordError = document.getElementById("passwordError");
+  const password = document.getElementById("password").value;
+  const confirmPassword = document.getElementById("confirmPassword").value;
+  const passwordError = document.getElementById("passwordError");
 
-    if (password !== confirmPassword) {
-        passwordError.style.display = "block";
-        document.getElementById("password").value = "";
-        document.getElementById("confirmPassword").value = "";
-        return false;
-    } else {
-        passwordError.style.display = "none";
-        return true;
-    }
+  if (password !== confirmPassword) {
+      passwordError.style.display = "block";
+      document.getElementById("password").value = "";
+      document.getElementById("confirmPassword").value = "";
+      return false;
+  } else {
+      passwordError.style.display = "none";
+      return true;
+  }
 }
 
-populateSelect(campusSelect, data);
+populateSelect(campusSelect, data); 
