@@ -1,15 +1,226 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
-        
-        <script src="" async defer></script>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Feedback Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style_feedback.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <img src="images/BPSU-weblogo.png" alt="Organization Logo" class="logo">
+        </div>
+        <div class="search-bar">
+            <h1 style="font-size: 40px; font-weight: bold; color: black;">Feedback Form</h1>
+        </div>
+    </header>
+
+    <main>
+        <form action="feedback.php" method="POST"></form>
+        <div class="wrapper">
+            <h3>1. How satisfied were you with the overall event?</h3>
+            <form action="#">
+                <div class="rating">
+                    <input type="number" name="question_1" hidden>
+                    <i class='bx bx-star star' style="--i: 0;"></i>
+                    <i class='bx bx-star star' style="--i: 1;"></i>
+                    <i class='bx bx-star star' style="--i: 2;"></i>
+                    <i class='bx bx-star star' style="--i: 3;"></i>
+                    <i class='bx bx-star star' style="--i: 4;"></i>
+                </div>
+        <div class="wrapper">
+            <h3>2. How would you rate the organization and planning of the event?</h3>
+            <form action="#">
+                <div class="rating">
+                    <input type="number" name="question_2" hidden>
+                    <i class='bx bx-star star' style="--i: 0;"></i>
+                    <i class='bx bx-star star' style="--i: 1;"></i>
+                    <i class='bx bx-star star' style="--i: 2;"></i>
+                    <i class='bx bx-star star' style="--i: 3;"></i>
+                    <i class='bx bx-star star' style="--i: 4;"></i>
+                </div>
+        <div class="wrapper">
+            <h3>3. How satisfied were you with the duration of each session or activity?</h3>
+            <form action="#">
+                <div class="rating">
+                    <input type="number" name="question_3" hidden>
+                    <i class='bx bx-star star' style="--i: 0;"></i>
+                    <i class='bx bx-star star' style="--i: 1;"></i>
+                    <i class='bx bx-star star' style="--i: 2;"></i>
+                    <i class='bx bx-star star' style="--i: 3;"></i>
+                    <i class='bx bx-star star' style="--i: 4;"></i>
+                </div>
+        <div class="wrapper">
+            <h3>4. Did the event meet your expectations?</h3>
+            <form action="#">
+                <div class="rating">
+                    <input type="number" name="question_4" hidden>
+                    <i class='bx bx-star star' style="--i: 0;"></i>
+                    <i class='bx bx-star star' style="--i: 1;"></i>
+                    <i class='bx bx-star star' style="--i: 2;"></i>
+                    <i class='bx bx-star star' style="--i: 3;"></i>
+                    <i class='bx bx-star star' style="--i: 4;"></i>
+                </div>
+        <div class="wrapper">
+            <h3>5. How likely are you to attend a similar event in the future?</h3>
+            <form action="#">
+                <div class="rating">
+                    <input type="number" name="question_5" hidden>
+                    <i class='bx bx-star star' style="--i: 0;"></i>
+                    <i class='bx bx-star star' style="--i: 1;"></i>
+                    <i class='bx bx-star star' style="--i: 2;"></i>
+                    <i class='bx bx-star star' style="--i: 3;"></i>
+                    <i class='bx bx-star star' style="--i: 4;"></i>
+                </div>
+        <div class="wrapper">
+            <h3>6. How would you rate the quality of the presentations or sessions?</h3>
+            <form action="#">
+                <div class="rating">
+                    <input type="number" name="question_6" hidden>
+                    <i class='bx bx-star star' style="--i: 0;"></i>
+                    <i class='bx bx-star star' style="--i: 1;"></i>
+                    <i class='bx bx-star star' style="--i: 2;"></i>
+                    <i class='bx bx-star star' style="--i: 3;"></i>
+                    <i class='bx bx-star star' style="--i: 4;"></i>
+                </div>
+        <div class="wrapper">
+            <h3>7. Were the event activities or sessions engaging?</h3>
+            <form action="#">
+                <div class="rating">
+                    <input type="number" name="question_7" hidden>
+                    <i class='bx bx-star star' style="--i: 0;"></i>
+                    <i class='bx bx-star star' style="--i: 1;"></i>
+                    <i class='bx bx-star star' style="--i: 2;"></i>
+                    <i class='bx bx-star star' style="--i: 3;"></i>
+                    <i class='bx bx-star star' style="--i: 4;"></i>
+                </div>
+        <div class="wrapper">
+            <h3>8. Was the event schedule convenient and well-paced?</h3>
+            <form action="#">
+                <div class="rating">
+                    <input type="number" name="question_8" hidden>
+                    <i class='bx bx-star star' style="--i: 0;"></i>
+                    <i class='bx bx-star star' style="--i: 1;"></i>
+                    <i class='bx bx-star star' style="--i: 2;"></i>
+                    <i class='bx bx-star star' style="--i: 3;"></i>
+                    <i class='bx bx-star star' style="--i: 4;"></i>
+                </div>
+        <div class="wrapper">
+            <h3>9. Did the event cover topics you expected based on the agenda or description?</h3>
+            <form action="#">
+                <div class="rating">
+                    <input type="number" name="question_9" hidden>
+                    <i class='bx bx-star star' style="--i: 0;"></i>
+                    <i class='bx bx-star star' style="--i: 1;"></i>
+                    <i class='bx bx-star star' style="--i: 2;"></i>
+                    <i class='bx bx-star star' style="--i: 3;"></i>
+                    <i class='bx bx-star star' style="--i: 4;"></i>
+                </div>
+        <div class="wrapper">
+            <h3>10. How would you rate the communication and information provided before the event?</h3>
+            <form action="#">
+                <div class="rating">
+                    <input type="number" name="question_10" hidden>
+                    <i class='bx bx-star star' style="--i: 0;"></i>
+                    <i class='bx bx-star star' style="--i: 1;"></i>
+                    <i class='bx bx-star star' style="--i: 2;"></i>
+                    <i class='bx bx-star star' style="--i: 3;"></i>
+                    <i class='bx bx-star star' style="--i: 4;"></i>
+                </div>
+        <div class="wrapper">
+            <h3>11. Did the event cover topics you expected based on the agenda or description?</h3>
+            <form action="#">
+                <div class="rating">
+                    <input type="number" name="question_11" hidden>
+                    <i class='bx bx-star star' style="--i: 0;"></i>
+                    <i class='bx bx-star star' style="--i: 1;"></i>
+                    <i class='bx bx-star star' style="--i: 2;"></i>
+                    <i class='bx bx-star star' style="--i: 3;"></i>
+                    <i class='bx bx-star star' style="--i: 4;"></i>
+                </div>
+        <div class="wrapper">
+            <h3>12. How satisfied were you with the professionalism of the event staff?</h3>
+            <form action="#">
+                <div class="rating">
+                    <input type="number" name="question_12" hidden>
+                    <i class='bx bx-star star' style="--i: 0;"></i>
+                    <i class='bx bx-star star' style="--i: 1;"></i>
+                    <i class='bx bx-star star' style="--i: 2;"></i>
+                    <i class='bx bx-star star' style="--i: 3;"></i>
+                    <i class='bx bx-star star' style="--i: 4;"></i>
+                </div>
+        <div class="wrapper">
+            <h3>13. How satisfied were you with the event's online presence (website, social media, etc.)?</h3>
+            <form action="#">
+                <div class="rating">
+                    <input type="number" name="question_13" hidden>
+                    <i class='bx bx-star star' style="--i: 0;"></i>
+                    <i class='bx bx-star star' style="--i: 1;"></i>
+                    <i class='bx bx-star star' style="--i: 2;"></i>
+                    <i class='bx bx-star star' style="--i: 3;"></i>
+                    <i class='bx bx-star star' style="--i: 4;"></i>
+                </div>
+        <div class="wrapper">
+            <h3>14. How would you rate the quality of the audio/visual equipment used during the event?</h3>
+            <form action="#">
+                <div class="rating">
+                    <input type="number" name="question_14" hidden>
+                    <i class='bx bx-star star' style="--i: 0;"></i>
+                    <i class='bx bx-star star' style="--i: 1;"></i>
+                    <i class='bx bx-star star' style="--i: 2;"></i>
+                    <i class='bx bx-star star' style="--i: 3;"></i>
+                    <i class='bx bx-star star' style="--i: 4;"></i>
+                </div>
+        <div class="wrapper">
+            <h3>15. How satisfied were you with the event's registration process?</h3>
+            <form action="#">
+                <div class="rating">
+                    <input type="number" name="question_15" hidden>
+                    <i class='bx bx-star star' style="--i: 0;"></i>
+                    <i class='bx bx-star star' style="--i: 1;"></i>
+                    <i class='bx bx-star star' style="--i: 2;"></i>
+                    <i class='bx bx-star star' style="--i: 3;"></i>
+                    <i class='bx bx-star star' style="--i: 4;"></i>
+                </div>
+                <div class="button-submit">
+                <textarea name="opinion" cols="30" rows="5" placeholder="Comments/Suggestions..."></textarea>
+                <button type="submit" class="submit-btn">Submit Feedback</button>
+                <button type="submit" class="submit-btn">Cancel</button>
+            </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/AJEK Logo.png" alt="AJEK Visionaries" style="height: 100px;">
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Email Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Organizations</a></li>
+                    <li><a href="#">Credits</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-bottom">
+            <p>Copyright © 2024. All Rights Reserved. AJEK Visionaries</p>
+        </div>
+    </footer>
+    <script src="feedback.js" async defer></script>
+</body>
 </html>

@@ -29,7 +29,7 @@ if ($stmt->num_rows > 0) {
     // Verify password
     if (password_verify($password, $hashed_password)) {
         $_SESSION['email'] = $email; // Store user session
-        header("Location: dashboard.html"); // Redirect to a dashboard page
+        header("Location: homepage.html"); // Redirect to a dashboard page
         exit();
     } else {
         echo "Invalid email or password.";
