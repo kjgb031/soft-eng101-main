@@ -1,3 +1,4 @@
+<?php
 // Include your database connection
 include 'db_connection.php';
 
@@ -68,3 +69,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && $_POST['action'] === 'submit') {
     header("Location: index.html");
     exit();
 }
+?>
