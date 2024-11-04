@@ -14,45 +14,15 @@ body {
 header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding: 10px;
   background-color: white;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.header-left {
-  display: flex;
-  align-items: center;
-}
-
 .logo {
   height: 90px;
-  margin-right: 10px;
 }
 
-h1 {
-  font-size: 1.2em;
-  color: #333;
-}
-
-.search-bar input {
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  width: 300px;
-}
-
-.header-icons {
-  display: flex;
-  gap: 15px;
-}
-
-.icon {
-  font-size: 1.5em;
-  cursor: pointer;
-  color: #666;
-}
 
 /* Footer */
 footer {
@@ -116,9 +86,10 @@ footer {
 
 
 .wrapper h3 {
-	font-size: 1.5rem;
+	font-size: 20px;
 	font-weight: 600;
 	margin-bottom: 1rem;
+  margin-left: 15px;
 }
 .rating {
 	display: flex;
@@ -127,6 +98,7 @@ footer {
 	font-size: 2rem;
 	color: var(--yellow);
 	margin-bottom: 2rem;
+  margin-left: 50px;
 }
 .rating .star {
 	cursor: pointer;

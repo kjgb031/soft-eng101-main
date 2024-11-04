@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 03, 2024 at 04:19 PM
+-- Generation Time: Nov 04, 2024 at 04:25 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -70,7 +70,8 @@ CREATE TABLE `events` (
   `status` varchar(255) NOT NULL,
   `cover_image` varchar(255) NOT NULL,
   `capacity` int(30) NOT NULL,
-  `user_id` int(11) NOT NULL
+  `user_id` int(11) NOT NULL,
+  `event_type` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -150,7 +151,7 @@ CREATE TABLE `student_data` (
 --
 
 INSERT INTO `student_data` (`student_id`, `campus`, `college`, `program`, `major`, `contact_number`, `user_id`) VALUES
-(0, 'main', 'College of Computer Studies', 'Bachelor of Computer Science', 'Software Development', 0, 0);
+(0, 'main', 'College of Allied Health Sciences', 'Bachelor of Science in Nursing', '', 2147483647, 0);
 
 -- --------------------------------------------------------
 
@@ -173,7 +174,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `first_name`, `last_name`, `avatar`, `role`, `email`, `password`) VALUES
-(0, '', '', '', '', 'kristinjoyceellise@gmail.com', '');
+(0, 'Kristel', 'Bagtas', '', '', 'kristinjoyceellise@gmail.com', '$2y$10$9SnApRYXcEHA8ImB9nQdeeqExc3E/76wZEmYlgL4TG0OvHTmdyiHW');
 
 --
 -- Indexes for dumped tables
