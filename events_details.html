@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Event</title>
+    <link rel="stylesheet" href="style_event_detail.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="images/BPSU-weblogo.png" alt="Logo" class="logo">
+        </header>
+        <section class="form-section">
+            <h2>Manage Event</h2>
+            <form id="event-form">
+                <div class="form-group">
+                    <label for="cover-photo">Cover Photo</label>
+                    <div class="cover-photo-placeholder"></div>
+                </div>
+                <div class="form-group">
+                    <label for="event-name">Event Name</label>
+                    <input type="text" id="event-name" name="event-name">
+                </div>
+                <div class="form-group">
+                    <label for="event-description">Event Description</label>
+                    <textarea id="event-description" name="event-description"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="event-date">Event Date</label>
+                    <input type="date" id="event-date" name="event-date">
+                </div>
+                <div class="form-group">
+                    <label for="event-location">Event Location</label>
+                    <input type="text" id="event-location" name="event-location">
+                </div>
+                <div class="form-group">
+                    <label for="start-time">Start Time</label>
+                    <input type="time" id="start-time" name="start-time">
+                </div>
+                <div class="form-group">
+                    <label for="end-time">End Time</label>
+                    <input type="time" id="end-time" name="end-time">
+                </div>
+                <div class="form-group">
+                    <label for="capacity">Capacity</label>
+                    <input type="number" id="capacity" name="capacity">
+                </div>
+            </form>
+        </section>
+    </div>
+</body>
+</html>
