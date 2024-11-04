@@ -16,3 +16,14 @@ document.querySelectorAll('.rating').forEach(ratingSection => {
         });
     });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const cancelButton = document.querySelector(".cancel-btn");
+
+    if (cancelButton) {
+        cancelButton.addEventListener("click", function() {
+            // Redirect to the homepage without submitting
+            window.location.href = "index.html";
+        });
+    }
+});
