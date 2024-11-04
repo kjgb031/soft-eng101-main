@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Organizations</title>
+    <link rel="stylesheet" href="style_manage_org.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+          <img src="images/BPSU-weblogo.png" alt="Logo"/>
+        </div>
+        <div class="search-container">
+          <input type="text" placeholder="Search" />
+        </div>
+        <div class="icons">
+          <i class="notification-icon"></i>
+          <a href="log-in_admin.html"><button class="btn" id="log-out">Log-out</button></a>
+        </div>
+      </header>
+
+    <!-- Add Organization Modal -->
+    <div id="addOrgModal" class="modal">
+        <div class="modal-content">
+            <h3>Add New Organization</h3>
+            <input type="text" id="orgNameInput" placeholder="Enter organization name">
+            <div class="modal-buttons">
+                <button id="cancelBtn" class="modal-btn">Cancel</button>
+                <button id="addBtn" class="modal-btn">Add</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Manage Organization Modal -->
+    <div id="manageOrgModal" class="modal">
+        <div class="modal-content">
+            <h3>Manage Organization</h3>
+            <input type="text" id="manageOrgNameInput" disabled>
+            <div class="modal-buttons">
+                <button id="editBtn" class="modal-btn">Edit</button>
+                <button id="saveBtn" class="modal-btn">Save</button>
+                <button id="deleteBtn" class="modal-btn">Delete</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <div class="manage-orgs-section">
+            <h1>Manage Organizations</h1>
+            <button class="add-org-btn">Add New Organization</button>
+            <div class="orgs-container">
+                <h2>All Organizations</h2>
+                <br>
+                <div class="org-item">
+                    <div class="org-avatar"></div>
+                    <span class="org-name">SAMPLE ORG NAME</span>
+                    <button class="manage-btn">Manage</button>
+                </div>
+                <div class="org-item">
+                    <div class="org-avatar"></div>
+                    <span class="org-name">SAMPLE ORG NAME</span>
+                    <button class="manage-btn">Manage</button>
+                </div>
+                <div class="org-item">
+                    <div class="org-avatar"></div>
+                    <span class="org-name">SAMPLE ORG NAME</span>
+                    <button class="manage-btn">Manage</button>
+                </div>
+                <div class="org-item">
+                    <div class="org-avatar"></div>
+                    <span class="org-name">SAMPLE ORG NAME</span>
+                    <button class="manage-btn">Manage</button>
+                </div>
+                <div class="org-item">
+                    <div class="org-avatar"></div>
+                    <span class="org-name">SAMPLE ORG NAME</span>
+                    <button class="manage-btn">Manage</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="contact-us">
+                <h3>Contact Us</h3>
+                <p>Facebook</p>
+                <p>Twitter</p>
+                <p>Instagram</p>
+                <p>Email Us</p>
+            </div>
+            <div class="links">
+                <h3>Links</h3>
+                <p><a href="dashboard_admin.html">Home</a></p>
+                <p>Events</p>
+                <p>Organizations</p>
+                <p>Credits</p>
+            </div>
+        </div>
+        <p class="copyright">Copyright 2024. All Rights Reserved. AJEK Visionaries</p>
+    </footer>
+    
+
+
+    <script>
+        // Get elements
+        const addOrgBtn = document.querySelector('.add-org-btn');
+        const addOrgModal = document.getElementById('addOrgModal');
+        const cancelBtn = document.getElementById('cancelBtn');
+        const addBtn = document.getElementById('addBtn');
+        const orgNameInput = document.getElementById('orgNameInput');
+        const orgsContainer = document.querySelector('.orgs-container');
+    
+        // Show modal
+        addOrgBtn.addEventListener('click', () => {
+            addOrgModal.style.display = 'block';
+        });
+    
+        // Hide modal on cancel
+        cancelBtn.addEventListener('click', () => {
+            addOrgModal.style.display = 'none';
+            orgNameInput.value = ''; // Clear input field
+        });
+    
+        // Add new organization
+        addBtn.addEventListener('click', () => {
+            const orgName = orgNameInput.value.trim();
+            if (orgName) {
+                // Create new organization item
+                const newOrgItem = document.createElement('div');
+                newOrgItem.classList.add('org-item');
+                newOrgItem.innerHTML = `
+                    <div class="org-avatar"></div>
+                    <span class="org-name">${orgName}</span>
+                    <button class="manage-btn">Manage</button>
+                `;
+    
+                // Append new organization to the container
+                orgsContainer.appendChild(newOrgItem);
+    
+                // Close modal and clear input
+                addOrgModal.style.display = 'none';
+                orgNameInput.value = '';
+            } else {
+                alert("Please enter a valid organization name.");
+            }
+        });
+    
+    // Close modal if user clicks outside of it
+        window.addEventListener('click', (event) => {
+            if (event.target === addOrgModal) {
+                addOrgModal.style.display = 'none';
+                orgNameInput.value = ''; // Clear input field
+            }
+        });
+    </script>
+    
+
+    <script>
+        // Manage modal elements
+        const manageOrgModal = document.getElementById('manageOrgModal');
+        const manageOrgNameInput = document.getElementById('manageOrgNameInput');
+        const editBtn = document.getElementById('editBtn');
+        const saveBtn = document.getElementById('saveBtn');
+        const deleteBtn = document.getElementById('deleteBtn');
+    
+        let currentOrgItem = null;
+    
+        // Show Manage modal when any "Manage" button is clicked
+        orgsContainer.addEventListener('click', (event) => {
+            if (event.target.classList.contains('manage-btn')) {
+                currentOrgItem = event.target.closest('.org-item');
+                manageOrgNameInput.value = currentOrgItem.querySelector('.org-name').textContent;
+                manageOrgModal.style.display = 'block';
+                manageOrgNameInput.disabled = true; // Disable input initially
+                saveBtn.disabled = true; // Disable Save button initially
+            }
+        });
+    
+        // Edit button: Enable the input field
+        editBtn.addEventListener('click', () => {
+            manageOrgNameInput.disabled = false;
+            manageOrgNameInput.focus();
+            saveBtn.disabled = false; // Enable Save button
+        });
+    
+        // Save button: Update the organization name
+        saveBtn.addEventListener('click', () => {
+            const newName = manageOrgNameInput.value.trim();
+            if (newName) {
+                currentOrgItem.querySelector('.org-name').textContent = newName;
+                manageOrgModal.style.display = 'none';
+                manageOrgNameInput.disabled = true;
+                saveBtn.disabled = true;
+            } else {
+                alert("Please enter a valid organization name.");
+            }
+        });
+    
+        // Delete button: Remove the organization item
+        deleteBtn.addEventListener('click', () => {
+            currentOrgItem.remove();
+            manageOrgModal.style.display = 'none';
+        });
+    
+        // Close modal if user clicks outside of it
+        window.addEventListener('click', (event) => {
+            if (event.target === manageOrgModal) {
+                manageOrgModal.style.display = 'none';
+                manageOrgNameInput.disabled = true;
+                saveBtn.disabled = true;
+            }
+        });
+    </script>
+    
+</body>
+</html>
