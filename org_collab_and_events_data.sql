@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 04, 2024 at 04:25 PM
+-- Generation Time: Nov 05, 2024 at 09:57 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -146,13 +146,6 @@ CREATE TABLE `student_data` (
   `user_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `student_data`
---
-
-INSERT INTO `student_data` (`student_id`, `campus`, `college`, `program`, `major`, `contact_number`, `user_id`) VALUES
-(0, 'main', 'College of Allied Health Sciences', 'Bachelor of Science in Nursing', '', 2147483647, 0);
-
 -- --------------------------------------------------------
 
 --
@@ -168,13 +161,6 @@ CREATE TABLE `users` (
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `users`
---
-
-INSERT INTO `users` (`user_id`, `first_name`, `last_name`, `avatar`, `role`, `email`, `password`) VALUES
-(0, 'Kristel', 'Bagtas', '', '', 'kristinjoyceellise@gmail.com', '$2y$10$9SnApRYXcEHA8ImB9nQdeeqExc3E/76wZEmYlgL4TG0OvHTmdyiHW');
 
 --
 -- Indexes for dumped tables
@@ -237,6 +223,58 @@ ALTER TABLE `student_data`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`user_id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `appointment_dates`
+--
+ALTER TABLE `appointment_dates`
+  MODIFY `appointment_date_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `appointment_reservations`
+--
+ALTER TABLE `appointment_reservations`
+  MODIFY `appointment_reservation_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `events`
+--
+ALTER TABLE `events`
+  MODIFY `event_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `event_registrations`
+--
+ALTER TABLE `event_registrations`
+  MODIFY `event_registration_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `feedbacks`
+--
+ALTER TABLE `feedbacks`
+  MODIFY `feedback_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `notifications`
+--
+ALTER TABLE `notifications`
+  MODIFY `notifications_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `student_data`
+--
+ALTER TABLE `student_data`
+  MODIFY `student_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- Constraints for dumped tables

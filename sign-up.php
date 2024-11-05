@@ -54,3 +54,88 @@ if ($sql_users->execute() === TRUE) {
 $sql_users->close(); // Close the users statement
 $conn->close(); // Close the database connection
 ?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sign-up</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style_signup.css">
+</head>
+<body>
+    <div class="form-container">
+        <img src="images/BPSU-weblogo.png" alt="BPSU Student Organization Collaboration and Events Management">
+        <form method="POST" action="sign-up.php" onsubmit="return validateForm()">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="first_name" required> <!-- Updated to match PHP variable -->
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="last_name" required> <!-- Updated to match PHP variable -->
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact_no">Contact Number</label>
+                    <input type="text" id="contact_no" name="contact_number" required> <!-- Updated to match PHP variable -->
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="campus">Campus</label>
+                    <select class="dropdown-signup" id="campus" name="campus" onchange="updateColleges()">
+                        <option value="">Select Campus</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="college">College</label>
+                    <select class="dropdown-signup" id="college" name="college" onchange="updatePrograms()">
+                        <option value="">Select College</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="program">Program</label>
+                    <select class="dropdown-signup" id="program" name="program" onchange="updateMajors()">
+                        <option value="">Select Program</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="major">Major</label>
+                    <select class="dropdown-signup" id="major" name="major">
+                        <option value="">Select Major</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" required>
+                </div>
+            </div>
+            <span id="passwordError" style="color: red; display: none;">Passwords do not match.</span>
+
+            <button type="submit" class="submit-btn">Sign Up</button>
+            <p>Already have an account? <a href="login_students.php" class="log-text">Log-in</a></p>
+        </form>
+    </div>
+    <script src="sign_up.js" async defer></script>
+</body>
+</html>
