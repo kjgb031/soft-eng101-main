@@ -1,6 +1,6 @@
 <?php
 // Include your database connection
-include 'db_connection.php';
+$dbname = "org_collab_and_events_data";
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && $_POST['action'] === 'submit') {
     $user_id = $_POST['user_id']; // Ensure user_id is provided by the form or session
@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && $_POST['action'] === 'submit') {
     $question_13 = $_POST['question_13'];
     $question_14 = $_POST['question_14'];
     $question_15 = $_POST['question_15'];
-    $comments = $_POST['opinion'];
+    $comments = $_POST['comments'];
 
     try {
         // Prepare the SQL statement
@@ -56,7 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && $_POST['action'] === 'submit') {
 
         // Execute the statement
         if ($stmt->execute()) {
-            header("Location: index.html"); // Redirect to homepage
+            header("Location: student_dashboard.html"); // Redirect to homepage
             exit();
         } else {
             echo "Failed to submit feedback.";
@@ -66,7 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && $_POST['action'] === 'submit') {
     }
 } else {
     // Redirect if not a valid form submission
-    header("Location: index.html");
+    header("Location: student_dashboard.html");
     exit();
 }
 ?>

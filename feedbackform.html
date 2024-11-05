@@ -13,22 +13,13 @@
         <div class="header-left">
             <img src="images/BPSU-weblogo.png" alt="Organization Logo" class="logo">
         </div>
-            <h1 style="font-size: 40px; font-weight: bold; color: black; margin-left: 30%;">Feedback Form</h1>
+            <h1 style="font-size: 40px; font-weight: bold; color: black; margin-left: 34%;">Feedback Form</h1>
     </header>
 
-<<<<<<< HEAD
-    <main>
-        <form action="feedback.php" method="POST"></form>
-        <h3 style="margin: 15px; font-size: 25px;">Rate from one to five. Five as the highest.</h3>
-        <div class="wrapper">
-            <h3>1. How satisfied were you with the overall event?</h3>
-            <form action="#">
-=======
      <main>
         <form action="feedback.php" method="POST">
             <div class="wrapper">
                 <h3>1. How satisfied were you with the overall event?</h3>
->>>>>>> f3a9456b100dc970839232b98adfde9bb1586729
                 <div class="rating">
                     <input type="number" name="question_01" hidden>
                     <i class='bx bx-star star' style="--i: 0;"></i>
@@ -54,7 +45,7 @@
             <div class="wrapper">
                 <h3>3. How satisfied were you with the duration of each session or activity?</h3>
                 <div class="rating">
-                    <input type="number" name="question_33" hidden>
+                    <input type="number" name="question_03" hidden>
                     <i class='bx bx-star star' style="--i: 0;"></i>
                     <i class='bx bx-star star' style="--i: 1;"></i>
                     <i class='bx bx-star star' style="--i: 2;"></i>
@@ -206,9 +197,8 @@
                     <i class='bx bx-star star' style="--i: 4;"></i>
                 </div>
             </div>
-
+                <textarea name="comments" cols="20" rows=2" placeholder="Comments/Suggestions..."></textarea>
             <div class="button-submit">
-                <textarea name="opinion" cols="30" rows="5" placeholder="Comments/Suggestions..."></textarea>
                 <button type="submit" name="action" value="submit" class="submit-btn">Submit Feedback</button>
                 <button type="button" name="action" value="cancel" class="submit-btn cancel-btn">Cancel</button>
             </div>

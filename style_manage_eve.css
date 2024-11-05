@@ -135,6 +135,22 @@ body {
     border-radius: 5px;
 }
 
+.click-btn {
+    background-color: #841818;
+    margin-top: 15px;
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    text-decoration: none;
+    
+}
+.click-btn:hover {
+    background-color: #660000;
+}
+
 /* Footer */
 footer {
     background-color: #800000;
